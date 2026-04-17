@@ -23,6 +23,10 @@ Class `ValidatorManager` bergantung langsung pada:
 
 Hal ini menyebabkan ketergantungan kuat (tight coupling).
 
+### 4. Pelanggaran Meaningful Naming & Data Structuring
+
+Pada kode awal, data mahasiswa dikirim melalui Long Parameter List (student_name, sks, prerequisite_met). Hal ini membuat kode sulit dibaca dan tidak deskriptif jika parameter bertambah banyak.
+
 ---
 
 ## Solusi Refactoring
@@ -30,3 +34,4 @@ Hal ini menyebabkan ketergantungan kuat (tight coupling).
 - Setiap jenis validasi dipisah ke class sendiri (SRP)
 - Menggunakan interface `IValidationRule` (OCP & DIP)
 - `RegistrationService` hanya bergantung pada abstraksi
+- Menggunakan @dataclass Student untuk membungkus data mahasiswa menjadi satu objek yang bermakna.
