@@ -71,7 +71,7 @@ class IpkValidation(IValidationRule):
 
 
 # --- PROGRAM UTAMA ---
-student1 = Student("mul", 22)
+student1 = Student("Al", 22)
 
 validations1 = [
     SksValidation(),
@@ -82,7 +82,7 @@ registration1 = RegistrationService(validations1)
 registration1.register(student1)
 
 
-student2 = Student("yono", 20)
+student2 = Student("Bekek", 20)
 
 validations2 = [
     SksValidation(),
